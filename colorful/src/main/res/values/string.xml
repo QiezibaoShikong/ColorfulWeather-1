@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ColorfulWeather</string>
+
+    <!--sweet_activity layout布局资源 -->
+    <string name="sweet_title_txt_humidity">湿度</string>
+    <string name="sweet_title_txt_ultraviolet">紫外线</string>
+    <string name="sweet_title_txt_influence">体感温度</string>
+    <string name="sweet_title_txt_sun_raise_and_set">日出日落</string>
+    <string name="sweet_title_txt_now">现在</string>
+    <string name="sweet_title_txt_forecast">预报</string>
+</resources>

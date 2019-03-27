@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sweet_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="left"
+    tools:context=".activity.SweetActivity">
+
+    <!--内容-->
+    <fr.castorflex.android.verticalviewpager.VerticalViewPager
+        android:id="@+id/vertical_vpage_sweet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--侧拉抽屉-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:tag="left"
+        android:background="@drawable/bg_sweet_full_gradient">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/base_dimen_size_dp_64"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>
