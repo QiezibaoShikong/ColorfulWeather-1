@@ -88,6 +88,7 @@ public class FragmentNowWeather extends Fragment {
         tvLocation.setTypeface(typeface);
         tvCardNow.setTypeface(typeface);
         tvCardForecast.setTypeface(typeface);
+
     }
 
     @Override
