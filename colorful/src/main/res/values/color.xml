@@ -8,4 +8,7 @@
     <color name="colorSecondaryText">#757575</color>
     <color name="colorDivider">#BDBDBD</color>
     <color name="colorTextorIcon">#FFFFFF</color>
+
+    <color name="colorDarkSkyBule">#00BFFF</color>
+    <color name="colorGrassGreen">#7CF000</color>
 </resources>

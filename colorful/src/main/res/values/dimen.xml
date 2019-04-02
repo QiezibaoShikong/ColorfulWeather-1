@@ -26,6 +26,7 @@
     <dimen name="base_dimen_size_sp_30">30sp</dimen>
     <dimen name="base_dimen_size_sp_40">40sp</dimen>
     <dimen name="base_dimen_size_sp_50">50sp</dimen>
+    <dimen name="base_dimen_size_sp_60">60sp</dimen>
 
     <!--base elevation-->
     <dimen name="base_dimen_elevation_dp_2">2dp</dimen>
@@ -43,10 +44,15 @@
     <dimen name="base_dimen_radius_dp_14">14dp</dimen>
     <dimen name="base_dimen_radius_dp_16">16dp</dimen>
 
-    <!--sweet_activity layout布局资源 -->
+    <!--碎片 1 ：fragment_weather dimen res -->
     <!--顶部的背景图片-->
     <dimen name="sweet_imgv_header_bg_height">160dp</dimen>
-    <!--天气卡片-->
+    <!--天气信息卡片-->
     <dimen name="sweet_card_weather_height">192dp</dimen>
     <dimen name="sweet_card_margin_top">120dp</dimen>
+
+    <!--碎片 2 ：fragment_life_index dimen res -->
+    <!--今日指数卡片-->
+    <dimen name="sweet_card_more_index_height">120dp</dimen>
+    <dimen name="sweet_cards_life_index_height">80dp</dimen>
 </resources>

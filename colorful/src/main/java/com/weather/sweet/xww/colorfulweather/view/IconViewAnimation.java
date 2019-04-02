@@ -86,7 +86,7 @@ public class IconViewAnimation extends View {
         super.onDraw(canvas);
         canvasWidth = canvas.getWidth();
         canvasHeight = canvas.getHeight();
-        final Bitmap icon = getNewBitmap(mWeatherBitmap, canvasWidth / 3, canvasWidth / 3);
+        final Bitmap icon = getNewBitmap(mWeatherBitmap, canvasWidth / 4, canvasWidth / 4);
         realBmpWidth = icon.getWidth();
         realBmpHeight = icon.getHeight();
         //画边框

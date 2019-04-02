@@ -32,6 +32,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         //加载布局
         setLayout(savedInstanceState);
         setupView();
+        setupData();
     }
 
     /**
@@ -57,12 +58,6 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 设置数据
      */
     protected void setupData() {
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        setupData();
     }
 
     @Override

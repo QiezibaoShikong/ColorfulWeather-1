@@ -59,4 +59,6 @@ dependencies {
     implementation 'com.github.castorflex.verticalviewpager:library:19.0.1'
     //屏幕适配
     implementation 'me.jessyan:autosize:1.1.2'
+    //MPAndroidChart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }

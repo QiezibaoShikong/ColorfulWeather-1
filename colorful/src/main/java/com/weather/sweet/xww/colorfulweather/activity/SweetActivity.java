@@ -8,14 +8,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Toast;
 
 import com.weather.sweet.xww.applibaray.adapt.FragmentPageAdapt;
 import com.weather.sweet.xww.colorfulweather.R;
 import com.weather.sweet.xww.colorfulweather.base.BaseActivity;
-import com.weather.sweet.xww.colorfulweather.fragment.FragmentForecastWeather;
-import com.weather.sweet.xww.colorfulweather.fragment.FragmentNowWeather;
-import com.weather.sweet.xww.colorfulweather.fragment.OnDrawerMenuToggleListener;
+import com.weather.sweet.xww.colorfulweather.fragment.FragmentLifeIndex;
+import com.weather.sweet.xww.colorfulweather.fragment.FragmentWeather;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,10 +28,10 @@ import fr.castorflex.android.verticalviewpager.VerticalViewPager;
  * @created at : 19-3-8
  * @time : 下午08:12
  */
-public class SweetActivity extends BaseActivity {
+public class SweetActivity extends BaseActivity  {
 
     @BindView(R.id.sweet_drawer)
-    DrawerLayout mDrawerLayout;
+    DrawerLayout mDrawerLayout;//侧拉抽屉
     @BindView(R.id.vertical_vpage_sweet)
     VerticalViewPager mVerticalViewPager;
 
@@ -46,11 +44,7 @@ public class SweetActivity extends BaseActivity {
     protected void setupView() {
         super.setupView();
         initDrawerLayout();
-    }
-
-    @Override
-    protected void setupData() {
-        setupViewPager();
+        initViewPager();
     }
 
     private void initDrawerLayout() {
@@ -83,21 +77,26 @@ public class SweetActivity extends BaseActivity {
         });
     }
 
-    private void setupViewPager() {
+    private void initViewPager() {
         final List<Fragment> fragments = new ArrayList<>();
-        final Fragment fragmentNow = new FragmentNowWeather();
-        final Fragment fragmentForecast = new FragmentForecastWeather();
+        final Fragment fragmentNow = new FragmentWeather();
+        final Fragment fragmentForecast = new FragmentLifeIndex();
         fragments.add(fragmentNow);
         fragments.add(fragmentForecast);
         final FragmentPageAdapt adapt = new FragmentPageAdapt(fragments, getSupportFragmentManager());
         mVerticalViewPager.setAdapter(adapt);
         //侧拉监听
-        ((FragmentNowWeather) fragmentNow).setOnDrawerMenuToggleListener(view -> {
+        ((FragmentWeather) fragmentNow).setOnDrawerMenuToggleListener(view -> {
                     final boolean isOpen = mDrawerLayout.isDrawerOpen(Gravity.START);
                     if (!isOpen) {
                         mDrawerLayout.openDrawer(Gravity.START);
                     }
                 }
         );
+    }
+
+    @Override
+    protected void setupData() {
+
     }
 }

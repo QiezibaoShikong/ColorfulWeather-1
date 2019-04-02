@@ -12,4 +12,73 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--碎片 1 ：fragment_weather style res -->
+    <!--卡片标题文本style-->
+    <style name="CardTitleStyle">
+        <item name="android:textColor">@color/colorTextorIcon</item>
+        <item name="android:textSize">@dimen/base_dimen_size_sp_14</item>
+        <item name="android:background">@drawable/bg_sweet_card_header_gradient</item>
+    </style>
+
+    <!--周预报卡片的文本style-->
+    <style name="DailyForecastText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/base_dimen_size_dp_8</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">@dimen/base_dimen_size_sp_10</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--碎片 2 ：fragment_life_index style res -->
+    <!--今日指数标题文本-->
+    <style name="TodayIndexTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/base_dimen_size_dp_8</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">@dimen/base_dimen_size_sp_14</item>
+    </style>
+
+    <!--今日指数内容文本-->
+    <style name="TodayIndexContentStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/base_dimen_size_dp_8</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">@dimen/base_dimen_size_sp_12</item>
+    </style>
+
+    <!--生活指数卡片style-->
+    <style name="LifeIndexCardStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginTop">@dimen/base_dimen_size_dp_8</item>
+    </style>
+    <!--生活指数卡片：指数名称文本style-->
+    <style name="LifeIndexCardTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/base_dimen_size_dp_4</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">@dimen/base_dimen_size_sp_12</item>
+    </style>
+    <!--生活指数卡片：指数情况文本style-->
+    <style name="LifeIndexCardInfoTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/base_dimen_size_dp_8</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">@dimen/base_dimen_size_sp_16</item>
+    </style>
+    <!--生活指数卡片：建议内容文本style-->
+    <style name="LifeIndexCardSuggestTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/base_dimen_size_dp_4</item>
+        <item name="android:layout_marginRight">@dimen/base_dimen_size_dp_8</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">@dimen/base_dimen_size_sp_10</item>
+    </style>
 </resources>
