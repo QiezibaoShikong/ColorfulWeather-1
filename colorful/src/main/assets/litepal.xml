@@ -10,4 +10,5 @@
         <mapping class="com.weather.sweet.xww.colorfulweather.entity.CountyEntity" />
         <mapping class="com.weather.sweet.xww.colorfulweather.entity.CitiesListEntity" />
     </list>
+
 </litepal>
