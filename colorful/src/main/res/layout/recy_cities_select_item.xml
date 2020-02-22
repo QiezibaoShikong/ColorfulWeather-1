@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@drawable/ripple_recy_color_accent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_city_select_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_dimen_size_dp_16"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="@dimen/base_dimen_size_sp_12" />
+
+    <View
+        android:id="@+id/view_city_selected"
+        android:layout_width="@dimen/base_dimen_size_dp_24"
+        android:layout_height="@dimen/base_dimen_size_dp_4"
+        android:layout_marginTop="@dimen/base_dimen_size_dp_8"
+        android:layout_marginBottom="@dimen/base_dimen_size_dp_16"
+        android:background="@color/colorDivider" />
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/bg_sweet_card_header_gradient"
+        android:gravity="center"
+        android:text="华美天气"
+        android:textColor="@color/colorTextorIcon"
+        android:textSize="@dimen/base_dimen_size_sp_30" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_dimen_size_dp_16"
+                android:autoLink="web"
+                android:gravity="center_vertical"
+                android:text="开源地址："
+                android:textSize="@dimen/base_dimen_size_sp_18" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="@dimen/base_dimen_size_dp_16"
+                android:autoLink="web"
+                android:gravity="center_vertical"
+                android:text="https://github.com/xww0826/ColorfulWeather"
+                android:textSize="@dimen/base_dimen_size_sp_16" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/base_dimen_size_dp_16"
+                android:autoLink="web"
+                android:gravity="center_vertical"
+                android:text="@string/software_introduce"
+                android:textSize="@dimen/base_dimen_size_sp_20" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/base_dimen_size_dp_8"
+        android:gravity="center"
+        android:text="Copyright 2020，Version：v1.0"
+        android:textSize="@dimen/base_dimen_size_sp_16" />
+</RelativeLayout>

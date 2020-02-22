@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_sweet_full_gradient"
-    tools:context=".activity.SweetActivity">
+    tools:context=".activities.SweetActivity"
+    tools:ignore="RtlHardcoded">
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/sweet_swipeRefresh"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -19,14 +19,8 @@
             <!--头部-->
             <android.support.v7.widget.ContentFrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <!--渐变背景-->
-                <android.support.v7.widget.AppCompatImageView
-                    android:id="@+id/imgv_sweet_header_bg"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/sweet_imgv_header_bg_height"
-                    android:background="@drawable/bg_sweet_card_header_gradient" />
+                android:layout_height="@dimen/sweet_imgv_header_bg_height"
+                android:background="@drawable/bg_sweet_card_header_gradient">
 
                 <android.support.v7.widget.LinearLayoutCompat
                     android:id="@+id/linear_header"
@@ -45,24 +39,23 @@
                             android:layout_height="@dimen/base_dimen_size_dp_24"
                             android:layout_gravity="center_vertical"
                             android:layout_marginLeft="@dimen/base_dimen_size_dp_16"
-                            android:src="@drawable/ic_drawer_menu_white" />
+                            android:src="@drawable/ic_add_white" />
 
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/tv_location"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:text="北京"
                             android:textColor="@color/colorTextorIcon"
                             android:textSize="@dimen/base_dimen_size_sp_18" />
 
                         <android.support.v7.widget.AppCompatImageView
-                            android:id="@+id/imgv_skin_menu_icon"
+                            android:id="@+id/imgv_bottom_menu_icon"
                             android:layout_width="@dimen/base_dimen_size_dp_24"
                             android:layout_height="@dimen/base_dimen_size_dp_24"
                             android:layout_gravity="right|center_vertical"
                             android:layout_marginRight="@dimen/base_dimen_size_dp_16"
-                            android:src="@drawable/ic_skin_white_menu" />
+                             />
                     </android.support.v7.widget.ContentFrameLayout>
 
                     <!--天气和图标-->
@@ -83,7 +76,6 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="晴天"
                                 android:textColor="@color/colorTextorIcon"
                                 android:textSize="@dimen/base_dimen_size_sp_22"
                                 android:typeface="serif" />
@@ -95,10 +87,10 @@
                             android:layout_weight="1">
 
                             <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/imgv_now_weather_icon"
                                 android:layout_width="@dimen/base_dimen_size_dp_56"
                                 android:layout_height="@dimen/base_dimen_size_dp_56"
                                 android:layout_gravity="center"
-                                android:src="@drawable/ic_103"
                                 android:tint="@color/colorTextorIcon" />
                         </android.support.v7.widget.ContentFrameLayout>
                     </android.support.v7.widget.LinearLayoutCompat>
@@ -108,7 +100,7 @@
 
             <!--天气卡片-->
             <android.support.v7.widget.CardView
-                android:id="@+id/card_layout_info"
+                android:id="@+id/card_weather_now"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/sweet_card_weather_height"
                 android:layout_marginLeft="@dimen/base_dimen_size_dp_16"
@@ -119,58 +111,69 @@
 
                 <android.support.v7.widget.ContentFrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_sweet_card_header_gradient">
 
+                    <!--必应背景图片-->
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/imgv_card_weather_now_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <!--卡片底部-->
                     <android.support.v7.widget.ContentFrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/base_dimen_size_dp_8">
+                        android:layout_gravity="bottom"
+                        android:background="@color/colorAlphaGray"
+                        android:paddingTop="@dimen/base_dimen_size_dp_2"
+                        android:paddingBottom="@dimen/base_dimen_size_dp_2">
 
                         <android.support.v7.widget.LinearLayoutCompat
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/base_dimen_size_dp_8"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/base_dimen_size_dp_4"
                             android:gravity="center_vertical">
 
                             <android.support.v7.widget.AppCompatImageView
-                                android:layout_width="@dimen/base_dimen_size_dp_24"
-                                android:layout_height="@dimen/base_dimen_size_dp_24"
-                                android:src="@drawable/ic_now_temp_icon" />
+                                android:layout_width="@dimen/base_dimen_size_dp_16"
+                                android:layout_height="@dimen/base_dimen_size_dp_16"
+                                android:src="@drawable/ic_now_tmp_range"
+                                android:tint="@color/colorGrassGreen"
+                                app:tint="@color/colorTextorIcon" />
 
                             <android.support.v7.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/base_dimen_size_dp_2"
-                                android:text="24°~32°"
-                                android:textColor="@color/colorSecondaryText"
-                                android:textSize="@dimen/base_dimen_size_sp_10"
-                                android:typeface="serif" />
+                                android:id="@+id/tv_now_aqi"
+                                style="@style/CardTextStyle"
+                                android:includeFontPadding="false" />
                         </android.support.v7.widget.LinearLayoutCompat>
-
 
                         <android.support.v7.widget.LinearLayoutCompat
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="right"
-                            android:layout_marginRight="@dimen/base_dimen_size_dp_8"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="@dimen/base_dimen_size_dp_4"
                             android:gravity="center_vertical">
 
                             <android.support.v7.widget.AppCompatImageView
-                                android:layout_width="@dimen/base_dimen_size_dp_24"
-                                android:layout_height="@dimen/base_dimen_size_dp_24"
-                                android:src="@drawable/ic_now_update_icon" />
+                                android:layout_width="@dimen/base_dimen_size_dp_16"
+                                android:layout_height="@dimen/base_dimen_size_dp_16"
+                                android:src="@drawable/ic_refresh_white"
+                                android:tint="@color/colorGrassGreen"
+                                app:tint="@color/colorTextorIcon" />
 
                             <android.support.v7.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/base_dimen_size_dp_2"
-                                android:text="17:52"
-                                android:textColor="@color/colorSecondaryText"
-                                android:textSize="@dimen/base_dimen_size_sp_10"
-                                android:typeface="serif" />
+                                android:id="@+id/tv_now_pm25"
+                                style="@style/CardTextStyle"
+                                android:includeFontPadding="false" />
                         </android.support.v7.widget.LinearLayoutCompat>
+
+
                     </android.support.v7.widget.ContentFrameLayout>
 
+                    <!--温度情况-->
                     <android.support.v7.widget.LinearLayoutCompat
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -178,121 +181,35 @@
                         android:layout_marginBottom="@dimen/base_dimen_size_dp_16"
                         android:orientation="vertical">
 
-                        <com.weather.sweet.xww.colorfulweather.view.IconViewAnimation
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/base_dimen_size_dp_40" />
-
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/tv_now_temperature"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:includeFontPadding="false"
-                            android:shadowColor="#22e14fad"
-                            android:shadowDx="10"
-                            android:shadowDy="10"
-                            android:shadowRadius="5"
-                            android:text="28°C"
-                            android:textColor="@color/colorDivider"
+                            android:textColor="@color/colorTextorIcon"
                             android:textSize="@dimen/base_dimen_size_sp_60"
                             android:typeface="serif" />
-                    </android.support.v7.widget.LinearLayoutCompat>
 
-                    <android.support.v7.widget.LinearLayoutCompat
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|center_horizontal"
-                        android:layout_marginBottom="@dimen/base_dimen_size_dp_4"
-                        android:orientation="vertical">
-
-                        <android.support.v7.widget.LinearLayoutCompat
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center_vertical">
-
-                            <android.support.v7.widget.AppCompatImageView
-                                android:layout_width="@dimen/base_dimen_size_dp_16"
-                                android:layout_height="@dimen/base_dimen_size_dp_16"
-                                android:src="@drawable/ic_now_air_quality"
-                                android:tint="@color/colorGrassGreen" />
-
-                            <android.support.v7.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/base_dimen_size_dp_2"
-                                android:text="空气质量"
-                                android:textColor="@color/colorSecondaryText"
-                                android:textSize="@dimen/base_dimen_size_sp_8"
-                                android:typeface="serif" />
-
-                            <android.support.v7.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/base_dimen_size_dp_2"
-                                android:text="优"
-                                android:textColor="@color/colorGrassGreen"
-                                android:textSize="@dimen/base_dimen_size_sp_10"
-                                android:typeface="serif" />
-                        </android.support.v7.widget.LinearLayoutCompat>
-
-                        <android.support.v7.widget.LinearLayoutCompat
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center_vertical">
-
-                            <android.support.v7.widget.AppCompatImageView
-                                android:layout_width="@dimen/base_dimen_size_dp_16"
-                                android:layout_height="@dimen/base_dimen_size_dp_16"
-                                android:src="@drawable/ic_now_advice_cloth" />
-
-                            <android.support.v7.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/base_dimen_size_dp_2"
-                                android:text="天气炎热、外出建议穿短袖、T-shirt"
-                                android:textColor="@color/colorSecondaryText"
-                                android:textSize="@dimen/base_dimen_size_sp_8"
-                                android:typeface="serif" />
-                        </android.support.v7.widget.LinearLayoutCompat>
                     </android.support.v7.widget.LinearLayoutCompat>
 
                 </android.support.v7.widget.ContentFrameLayout>
             </android.support.v7.widget.CardView>
 
+
             <!--底部卡片-->
             <android.support.v7.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/card_layout_info"
+                android:layout_below="@id/card_weather_now"
                 android:layout_marginLeft="@dimen/base_dimen_size_dp_16"
                 android:layout_marginTop="@dimen/base_dimen_size_dp_8"
                 android:layout_marginRight="@dimen/base_dimen_size_dp_16"
                 android:orientation="vertical">
 
+                <!--逐时预报-->
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="@dimen/base_dimen_size_dp_8"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="@dimen/base_dimen_radius_dp_8"
-                    app:cardElevation="@dimen/base_dimen_elevation_dp_4">
-
-                    <android.support.v7.widget.AppCompatTextView
-                        android:id="@+id/tv_hourly_card_title"
-                        style="@style/CardTitleStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/sweet_title_txt_hourly" />
-                </android.support.v7.widget.CardView>
-
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_margin="@dimen/base_dimen_size_dp_8"
-                    android:layout_weight="1"
                     app:cardCornerRadius="@dimen/base_dimen_radius_dp_8"
                     app:cardElevation="@dimen/base_dimen_elevation_dp_4">
 
@@ -302,24 +219,50 @@
                         android:orientation="vertical">
 
                         <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_hourly_card_title"
+                            style="@style/CardTitleStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/sweet_title_txt_hourly" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_hourly_forecast"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </android.support.v7.widget.LinearLayoutCompat>
+                </android.support.v7.widget.CardView>
+
+                <!--未来一周天气预报-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/base_dimen_size_dp_8"
+                    app:cardCornerRadius="@dimen/base_dimen_radius_dp_8"
+                    app:cardElevation="@dimen/base_dimen_elevation_dp_4">
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/tv_daily_card_title"
                             style="@style/CardTitleStyle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="@string/sweet_title_txt_daily_forecast" />
+                            android:text="@string/sweet_title_txt_daily" />
 
                         <android.support.v7.widget.RecyclerView
                             android:id="@+id/recycler_daily_forecast"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_margin="@dimen/base_dimen_size_dp_4" />
-
+                            android:layout_height="wrap_content" />
                     </android.support.v7.widget.LinearLayoutCompat>
                 </android.support.v7.widget.CardView>
-
             </android.support.v7.widget.LinearLayoutCompat>
 
         </RelativeLayout>
-    </android.support.v4.widget.SwipeRefreshLayout>
+    </android.support.v4.widget.NestedScrollView>
+
 </android.support.design.widget.CoordinatorLayout>

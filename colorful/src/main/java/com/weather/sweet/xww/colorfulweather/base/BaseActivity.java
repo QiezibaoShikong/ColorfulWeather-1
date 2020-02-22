@@ -1,11 +1,17 @@
 package com.weather.sweet.xww.colorfulweather.base;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+
 import com.weather.sweet.xww.applibaray.utils.activity.ActivityUtil;
 import com.weather.sweet.xww.applibaray.utils.statusbar.StatusBarUtil;
+import com.weather.sweet.xww.colorfulweather.R;
+
 import butterknife.ButterKnife;
 
 
@@ -19,11 +25,16 @@ import butterknife.ButterKnife;
 public abstract class BaseActivity extends AppCompatActivity {
 
     protected Context mContext;
+    protected Typeface mTypeface;
+    protected SharedPreferences mSharedPreferences;
 
+    protected void onPreCreate() {
 
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        onPreCreate();
         super.onCreate(savedInstanceState);
 
         ActivityUtil.add(this);
@@ -31,14 +42,18 @@ public abstract class BaseActivity extends AppCompatActivity {
         init();
         //加载布局
         setLayout(savedInstanceState);
+
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         setupView();
         setupData();
+
     }
 
     /**
      * 在 view 绑定之前调用此方法，如设置状态栏
      */
     protected void init() {
+        mTypeface = Typeface.createFromAsset(getAssets(), "maobixingshu.ttf");
     }
 
     /**
@@ -63,7 +78,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         mContext = null;
-        super.onDestroy();
         ActivityUtil.remove(this);
+        super.onDestroy();
     }
 }

@@ -3,7 +3,6 @@ package com.weather.sweet.xww.applibaray.app;
 import android.content.Context;
 import android.os.Handler;
 
-
 import com.weather.sweet.xww.applibaray.utils.log.LogUtil;
 
 import java.util.HashMap;
@@ -46,8 +45,23 @@ public final class AppConfigurator {
         return this;
     }
 
-    public final AppConfigurator with(String apiHost) {
+    public final AppConfigurator withApiHost(String apiHost) {
         APP_CONFIGS.put(ConfigKeys.Api_Host.name(), apiHost);
+        return this;
+    }
+
+    public final AppConfigurator withBingApi(String bingApi) {
+        APP_CONFIGS.put(ConfigKeys.Bing_Api.name(), bingApi);
+        return this;
+    }
+
+    public final AppConfigurator withProvinceApi(String provinceApi) {
+        APP_CONFIGS.put(ConfigKeys.Province_Api.name(), provinceApi);
+        return this;
+    }
+
+    public final AppConfigurator withApiKey(String apiKey) {
+        APP_CONFIGS.put(ConfigKeys.Api_Key.name(), apiKey);
         return this;
     }
 
@@ -57,12 +71,5 @@ public final class AppConfigurator {
     public final void configure() {
         //logger 工具
         LogUtil.init(LogUtil.DEBUG);
-
-        //        Toasty.Config.getInstance()
-//                .tintIcon(tintIcon)
-//                .setToastTypeface(typeface)
-//                .setTextSize(sizeInSp)
-//                .allowQueue(allowQueue)
-//                .apply();
     }
 }

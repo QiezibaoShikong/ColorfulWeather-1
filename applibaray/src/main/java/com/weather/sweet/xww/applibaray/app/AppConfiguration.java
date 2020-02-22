@@ -40,6 +40,18 @@ public final class AppConfiguration {
         return (String) getAppConfigs(ConfigKeys.Api_Host.name());
     }
 
+    public final String getBingApi() {
+        return (String) getAppConfigs(ConfigKeys.Bing_Api.name());
+    }
+
+    public final String getProvinceApi() {
+        return (String) getAppConfigs(ConfigKeys.Province_Api.name());
+    }
+
+    public final String getApiKey() {
+        return (String) getAppConfigs(ConfigKeys.Api_Key.name());
+    }
+
     public final Handler getHandler() {
         return (Handler) getAppConfigs(ConfigKeys.Handler.name());
     }

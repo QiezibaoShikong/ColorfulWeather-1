@@ -1,25 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="64dp"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+<android.support.v7.widget.ContentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/base_dimen_size_dp_8"
+    tools:ignore="RtlHardcoded,RtlSymmetry">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/tv_daily_time"
-        style="@style/DailyForecastText"
-        android:text="今天" />
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/base_dimen_size_dp_8">
 
-    <android.support.v7.widget.AppCompatImageView
-        android:id="@+id/imgv_daily_weather_icon"
-        android:layout_width="@dimen/base_dimen_size_dp_24"
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_daily_date"
+            style="@style/DailyForecastText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--<android.support.v7.widget.AppCompatTextView-->
+        <!--android:id="@+id/tv_daily_week"-->
+        <!--style="@style/DailyForecastText"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/base_dimen_size_dp_8" />-->
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/base_dimen_size_dp_24"
-        android:layout_marginTop="@dimen/base_dimen_size_dp_8"
-        android:src="@drawable/ic_100" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/base_dimen_size_dp_16"
+        android:gravity="center_vertical">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imgv_daily_icon"
+            android:layout_width="@dimen/base_dimen_size_dp_24"
+            android:layout_height="@dimen/base_dimen_size_dp_24"
+            android:layout_marginLeft="@dimen/base_dimen_size_dp_8"
+            android:tint="@color/colorPrimary" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_daily_weather"
+            style="@style/DailyForecastText"
+            android:layout_width="@dimen/base_dimen_size_dp_80"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_dimen_size_dp_8" />
+    </android.support.v7.widget.LinearLayoutCompat>
 
     <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/tv_daily_temperature"
+        android:id="@+id/tv_daily_temp_range"
         style="@style/DailyForecastText"
-        android:text="19°~27°" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="@dimen/base_dimen_size_dp_8" />
 
-</android.support.v7.widget.LinearLayoutCompat>
+</android.support.v7.widget.ContentFrameLayout>

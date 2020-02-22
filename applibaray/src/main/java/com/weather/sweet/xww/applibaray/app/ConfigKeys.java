@@ -10,5 +10,8 @@ package com.weather.sweet.xww.applibaray.app;
 public enum ConfigKeys {
     App_Context,
     Api_Host,
+    Api_Key,
+    Bing_Api,
+    Province_Api,
     Handler
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_sweet_full_gradient"
-    tools:context=".activity.SweetActivity">
+    tools:context=".activities.SweetActivity">
 
     <android.support.v7.widget.LinearLayoutCompat
         android:id="@+id/linear_content"
@@ -15,7 +15,10 @@
 
         <include layout="@layout/layout_today_index_card" />
 
-        <include layout="@layout/layout_life_index_cards" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_life_index"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </android.support.v7.widget.LinearLayoutCompat>
 

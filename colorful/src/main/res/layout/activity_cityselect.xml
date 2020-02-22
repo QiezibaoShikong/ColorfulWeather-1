@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.ContentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_sweet_full_gradient">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imgv_city_select_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/linear_city_selected"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/base_dimen_size_dp_64">
+
+
+                <android.support.v7.widget.ContentFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/imgv_city_select_close"
+                        android:layout_width="@dimen/base_dimen_size_dp_24"
+                        android:layout_height="@dimen/base_dimen_size_dp_24"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/base_dimen_size_dp_16"
+                        android:src="@drawable/ic_city_choose_back_icon" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/city_selected_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="选择城市"
+                        android:textColor="@color/colorTextorIcon"
+                        android:textSize="@dimen/base_dimen_size_sp_18" />
+
+                </android.support.v7.widget.ContentFrameLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/city_select_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="361dp"
+                    android:layout_marginLeft="@dimen/base_dimen_size_dp_16"
+                    android:layout_marginTop="@dimen/city_select_card_height"
+                    android:layout_marginRight="@dimen/base_dimen_size_dp_16"
+                    android:layout_marginBottom="@dimen/base_dimen_size_dp_32"
+                    app:cardCornerRadius="@dimen/base_dimen_radius_dp_8"
+                    app:cardElevation="@dimen/base_dimen_elevation_dp_4">
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tl_city_selected"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/base_dimen_size_dp_48"
+                        android:layout_marginLeft="@dimen/base_dimen_size_dp_8"
+                        android:layout_marginTop="@dimen/base_dimen_size_dp_96"
+                        android:layout_marginRight="@dimen/base_dimen_size_dp_8"
+                        app:tabRippleColor="@color/colorAccent"
+                        app:tabSelectedTextColor="@color/colorAccent" />
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vp_city_selected"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/base_dimen_size_dp_8"
+                        android:layout_marginTop="144dp"
+                        android:layout_marginRight="@dimen/base_dimen_size_dp_8"
+                        android:layout_marginBottom="@dimen/base_dimen_size_dp_32">
+
+                    </android.support.v4.view.ViewPager>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="@dimen/base_dimen_size_dp_32"
+                    android:layout_marginRight="@dimen/base_dimen_size_dp_32"
+                    app:cardCornerRadius="@dimen/base_dimen_radius_dp_6"
+                    app:cardElevation="@dimen/base_dimen_elevation_dp_8"
+                    app:layout_anchor="@id/city_select_card"
+                    app:layout_anchorGravity="top|center_horizontal">
+
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/imgv_city_select_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_sweet_card_header_gradient"
+                        android:scaleType="centerCrop" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_city_select_temperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorTextorIcon"
+                        android:textSize="@dimen/base_dimen_size_sp_30" />
+
+                    <android.support.v7.widget.ContentFrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/colorAlphaGray">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_city_selected_sub_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/base_dimen_size_dp_8"
+                            android:textColor="@color/colorTextorIcon"
+                            android:textSize="@dimen/base_dimen_size_sp_10" />
+
+                        <android.support.v7.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="@dimen/base_dimen_size_dp_8"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/imgv_city_select_now_weather_icon"
+                                android:layout_width="@dimen/base_dimen_size_dp_16"
+                                android:layout_height="@dimen/base_dimen_size_dp_16"
+                                android:tint="@color/colorTextorIcon" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tv_city_selected_now_weather"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/base_dimen_size_dp_2"
+                                android:textColor="@color/colorTextorIcon"
+                                android:textSize="@dimen/base_dimen_size_sp_10" />
+                        </android.support.v7.widget.LinearLayoutCompat>
+                    </android.support.v7.widget.ContentFrameLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_city_select_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/base_dimen_size_dp_48"
+                    android:src="@drawable/ic_city_select_return_icon"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:layout_anchor="@id/city_select_card"
+                    app:layout_anchorGravity="bottom|left"
+                    app:rippleColor="@color/colorAccent" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_city_selected_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/base_dimen_size_dp_48"
+                    android:src="@drawable/ic_city_selected_confirm"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:layout_anchor="@id/city_select_card"
+                    app:layout_anchorGravity="bottom|right"
+                    app:rippleColor="@color/colorAccent" />
+
+            </android.support.design.widget.CoordinatorLayout>
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.v7.widget.ContentFrameLayout>

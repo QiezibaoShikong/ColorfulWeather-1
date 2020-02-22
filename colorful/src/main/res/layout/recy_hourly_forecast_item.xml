@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="64dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_recy_color_accent_masked"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/base_dimen_size_dp_8">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_hourly_time"
+        style="@style/HourlyForecastText" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imgv_hourly_weather_icon"
+        android:layout_width="@dimen/base_dimen_size_dp_24"
+        android:layout_height="@dimen/base_dimen_size_dp_24"
+        android:layout_marginTop="@dimen/base_dimen_size_dp_8"
+        android:tint="@color/colorPrimary" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_hourly_temperature"
+        style="@style/HourlyForecastText" />
+
+</android.support.v7.widget.LinearLayoutCompat>

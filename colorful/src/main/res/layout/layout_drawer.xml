@@ -1,8 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="left"
+    android:background="@drawable/bg_sweet_full_gradient"
+    tools:context=".activities.SweetActivity">
 
-    >
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/linear_drawer_head_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_drawer_city_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/base_dimen_size_dp_8"
+            android:text="添加城市"
+            android:textColor="@color/colorTextorIcon"
+            android:textSize="@dimen/base_dimen_size_sp_18" />
+
+        <android.support.v7.widget.ContentFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_cities_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/base_dimen_size_dp_32" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_data_source_licence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="@dimen/base_dimen_size_dp_8"
+                android:text="数据源 ： 和风天气"
+                android:textColor="@color/colorTextorIcon"
+                android:textSize="@dimen/base_dimen_size_sp_16" />
+        </android.support.v7.widget.ContentFrameLayout>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.design.widget.CoordinatorLayout>

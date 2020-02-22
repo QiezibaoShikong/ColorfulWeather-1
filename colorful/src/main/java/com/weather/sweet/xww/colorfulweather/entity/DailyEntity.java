@@ -1,31 +1,26 @@
 package com.weather.sweet.xww.colorfulweather.entity;
 
 /**
- * 功能：
+ * 功能：未来几天天气预报实体类
  *
  * @author : xww
- * @created at : 2019/3/31
- * @time : 20:30
+ * @created at : 2019/4/5
+ * @time : 20:57
  */
 public class DailyEntity {
-    private String time;
+
     private String condCode;
-    private String minTemp;
-    private String maxTemp;
+    private String date;
+    private String week;
+    private String tempRange;
+    private String weather;
 
-    public DailyEntity(String time, String condCode, String minTemp, String maxTemp) {
-        this.time = time;
+    public DailyEntity(String condCode, String date, String week, String tempRange, String weather) {
         this.condCode = condCode;
-        this.minTemp = minTemp;
-        this.maxTemp = maxTemp;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
+        this.date = date;
+        this.week = week;
+        this.tempRange = tempRange;
+        this.weather = weather;
     }
 
     public String getCondCode() {
@@ -36,19 +31,35 @@ public class DailyEntity {
         this.condCode = condCode;
     }
 
-    public String getMinTemp() {
-        return minTemp;
+    public String getDate() {
+        return date;
     }
 
-    public void setMinTemp(String minTemp) {
-        this.minTemp = minTemp;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public String getMaxTemp() {
-        return maxTemp;
+    public String getWeek() {
+        return week;
     }
 
-    public void setMaxTemp(String maxTemp) {
-        this.maxTemp = maxTemp;
+    public void setWeek(String week) {
+        this.week = week;
+    }
+
+    public String getTempRange() {
+        return tempRange;
+    }
+
+    public void setTempRange(String tempRange) {
+        this.tempRange = tempRange;
+    }
+
+    public String getWeather() {
+        return weather;
+    }
+
+    public void setWeather(String weather) {
+        this.weather = weather;
     }
 }

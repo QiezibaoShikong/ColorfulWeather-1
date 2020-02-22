@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- bule color style -->
-    <color name="colorPrimary">#f9d423</color>
-    <color name="colorPrimaryDark">#faaa22</color>
-    <color name="colorAccent">#e14fad</color>
+    <!-- blue color style -->
+    <color name="colorPrimary">#ABDCFF</color>
+    <color name="colorPrimaryDark">#0396FF</color>
+    <color name="colorAccent">#0396FF</color>
     <color name="colorPrimaryText">#212121</color>
     <color name="colorSecondaryText">#757575</color>
     <color name="colorDivider">#BDBDBD</color>
     <color name="colorTextorIcon">#FFFFFF</color>
-
     <color name="colorDarkSkyBule">#00BFFF</color>
     <color name="colorGrassGreen">#7CF000</color>
+    <color name="colorAlphaGray">#88323232</color>
+    <color name="colorTransparent">#00000000</color>
 </resources>

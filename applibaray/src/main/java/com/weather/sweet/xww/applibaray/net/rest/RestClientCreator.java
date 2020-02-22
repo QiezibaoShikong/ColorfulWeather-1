@@ -1,5 +1,7 @@
 package com.weather.sweet.xww.applibaray.net.rest;
 
+import com.weather.sweet.xww.applibaray.app.AppConfiguration;
+
 import java.util.WeakHashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -29,8 +31,9 @@ public final class RestClientCreator {
      */
     private static final class RestClientHolder {
         //创建 Retrofit 实例，必须设置 baseurl ，且以 / 结尾
+        private final static String BASE_URL = AppConfiguration.getInstance().getApiHost();
         private static final Retrofit REST_CLIENT = new Retrofit.Builder()
-                .baseUrl("http://127.0.0.1/")
+                .baseUrl(BASE_URL)
                 .client(OkHttpClientHolder.OK_HTTP_CLIENT)
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .build();

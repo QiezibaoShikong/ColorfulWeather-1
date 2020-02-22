@@ -9,6 +9,15 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        splits {
+            abi {
+                enable true
+                reset()
+                include 'x86', 'armeabi-v7a', 'x86_64'
+                universalApk true
+            }
+        }
     }
     buildTypes {
         release {
@@ -44,12 +53,9 @@ dependencies {
     //AVLoadingIndicatorView
     implementation 'com.wang.avi:library:2.1.3'
     //glide
-    implementation 'com.github.bumptech.glide:glide:4.9.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'jp.wasabeef:glide-transformations:4.0.0'
     //litepal
     implementation 'org.litepal.android:java:3.0.0'
-    //statusbarutil
-    implementation 'com.jaeger.statusbarutil:library:1.5.1'
     //网络请求
     implementation 'com.squareup.okio:okio:1.14.0'
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
@@ -59,6 +65,10 @@ dependencies {
     implementation 'com.github.castorflex.verticalviewpager:library:19.0.1'
     //屏幕适配
     implementation 'me.jessyan:autosize:1.1.2'
-    //MPAndroidChart
-    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    //刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    // 侧拉删除
+    implementation "com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0"
 }

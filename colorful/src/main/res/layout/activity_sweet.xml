@@ -6,25 +6,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:tag="left"
-    tools:context=".activity.SweetActivity">
+    tools:context=".activities.SweetActivity">
 
-    <!--内容-->
-    <com.weather.sweet.xww.colorfulweather.view.VerticalViewPager
-        android:id="@+id/vertical_vpage_sweet"
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/sweet_swipeRefresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_sweet_card_header_gradient"
+        app:srlAccentColor="@color/colorTextorIcon">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vertical_vpage_sweet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
 
     <!--侧拉抽屉-->
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="left"
-        android:background="@drawable/bg_sweet_full_gradient"
-        tools:ignore="RtlHardcoded">
+    <include layout="@layout/layout_drawer" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/base_dimen_size_dp_64" />
-    </RelativeLayout>
 </android.support.v4.widget.DrawerLayout>
