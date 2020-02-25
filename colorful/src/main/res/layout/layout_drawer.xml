@@ -8,13 +8,13 @@
     android:background="@drawable/bg_sweet_full_gradient"
     tools:context=".activities.SweetActivity">
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <LinearLayout
         android:id="@+id/linear_drawer_head_bar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <android.support.v7.widget.AppCompatTextView
+        <TextView
             android:id="@+id/tv_drawer_city_choose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,27 +24,28 @@
             android:textColor="@color/colorTextorIcon"
             android:textSize="@dimen/base_dimen_size_sp_18" />
 
-        <android.support.v7.widget.ContentFrameLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycler_cities_list"
                 android:layout_width="match_parent"
+                android:overScrollMode="never"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="@dimen/base_dimen_size_dp_32" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <TextView
                 android:id="@+id/tv_data_source_licence"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_marginBottom="@dimen/base_dimen_size_dp_8"
-                android:text="数据源 ： 和风天气"
+                android:text="@string/software_data_source_api"
                 android:textColor="@color/colorTextorIcon"
-                android:textSize="@dimen/base_dimen_size_sp_16" />
-        </android.support.v7.widget.ContentFrameLayout>
+                android:textSize="@dimen/base_dimen_size_sp_12" />
+        </FrameLayout>
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

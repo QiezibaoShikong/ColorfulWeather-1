@@ -8,11 +8,10 @@
     android:tag="left"
     tools:context=".activities.SweetActivity">
 
-    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+    <com.weather.sweet.xww.colorfulweather.views.SmartRefreshLayout
         android:id="@+id/sweet_swipeRefresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_sweet_card_header_gradient"
         app:srlAccentColor="@color/colorTextorIcon">
 
         <com.scwang.smartrefresh.layout.header.ClassicsHeader
@@ -22,8 +21,9 @@
         <android.support.v4.view.ViewPager
             android:id="@+id/vertical_vpage_sweet"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+    </com.weather.sweet.xww.colorfulweather.views.SmartRefreshLayout>
 
 
     <!--侧拉抽屉-->

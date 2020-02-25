@@ -5,8 +5,11 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
+import android.support.v7.app.SkinAppCompatDelegateImpl;
 
 import com.weather.sweet.xww.applibaray.utils.activity.ActivityUtil;
 import com.weather.sweet.xww.applibaray.utils.statusbar.StatusBarUtil;
@@ -32,6 +35,15 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * 如果项目中使用的Activity继承自AppCompatActivity，需要重载getDelegate()方法
+     */
+    @NonNull
+    @Override
+    public AppCompatDelegate getDelegate() {
+        return SkinAppCompatDelegateImpl.get(this, this);
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         onPreCreate();
@@ -53,7 +65,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 在 view 绑定之前调用此方法，如设置状态栏
      */
     protected void init() {
-        mTypeface = Typeface.createFromAsset(getAssets(), "maobixingshu.ttf");
+        mTypeface = Typeface.createFromAsset(getAssets(), "fangzhengkaiti.ttf");
     }
 
     /**

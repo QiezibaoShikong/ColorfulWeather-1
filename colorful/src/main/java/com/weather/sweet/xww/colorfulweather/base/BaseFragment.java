@@ -55,7 +55,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = setContentView(inflater, container, savedInstanceState);
-        mTypeface = Typeface.createFromAsset(getActivity().getAssets(), "maobixingshu.ttf");
+        mTypeface = Typeface.createFromAsset(getActivity().getAssets(), "fangzhengkaiti.ttf");
         return view;
     }
 

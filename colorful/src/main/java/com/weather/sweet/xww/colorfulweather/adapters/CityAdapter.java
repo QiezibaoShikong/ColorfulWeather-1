@@ -1,10 +1,12 @@
 package com.weather.sweet.xww.colorfulweather.adapters;
 
+import android.graphics.Typeface;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatTextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.weather.sweet.xww.applibaray.app.AppConfiguration;
 import com.weather.sweet.xww.colorfulweather.R;
 import com.weather.sweet.xww.colorfulweather.entity.CityEntity;
 
@@ -26,7 +28,6 @@ public class CityAdapter extends BaseQuickAdapter<CityEntity,BaseViewHolder> {
     @Override
     protected void convert(BaseViewHolder helper, CityEntity item) {
         final AppCompatTextView tvProvinceName = helper.getView(R.id.tv_city_search_name);
-
         tvProvinceName.setText(item.getCityName());
     }
 }

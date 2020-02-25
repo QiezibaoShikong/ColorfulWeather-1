@@ -7,7 +7,7 @@
     android:background="@drawable/bg_sweet_full_gradient"
     tools:context=".activities.SweetActivity">
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <LinearLayout
         android:id="@+id/linear_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,8 +18,9 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_life_index"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

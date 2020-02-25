@@ -1,6 +1,8 @@
 package com.weather.sweet.xww.colorfulweather.fragments;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -9,12 +11,15 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONArray;
@@ -44,6 +49,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import skin.support.SkinCompatManager;
 
 /**
  * 功能：app主界面：碎片一
@@ -59,10 +65,10 @@ public class FragmentWeather extends BaseFragment {
     AppCompatImageView ivDrawerMenu;//开启抽屉的按钮
 
     @BindView(R.id.imgv_bottom_menu_icon)
-    AppCompatImageView ivBottomMenu;//开启抽屉的按钮
+    AppCompatImageView ivBottomMenu;//切换主题的按钮
 
     @BindView(R.id.linear_header)
-    LinearLayoutCompat linearLayoutHeader;//用于添加状态栏占位视图的父容器
+    LinearLayout linearLayoutHeader;//用于添加状态栏占位视图的父容器
 
     @BindView(R.id.tv_now_weather)
     AppCompatTextView tvNowWeather;//天气
@@ -171,6 +177,7 @@ public class FragmentWeather extends BaseFragment {
         ivBottomMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showSkinDialog();
             }
         });
     }
@@ -314,5 +321,48 @@ public class FragmentWeather extends BaseFragment {
             values.put("weather", entity.getWeather());
             LitePal.updateAll(CitiesListEntity.class, values, "cityName = ?", cityName);
         }
+    }
+
+
+    private void showSkinDialog() {
+        final View view = LayoutInflater.from(mContext).inflate(R.layout.dialog_skin, null);
+        TextView tvDialogTitle = view.findViewById(R.id.tv_skin_dialog_title);
+        ImageView ivClose = view.findViewById(R.id.imgv_dialog_close);
+        LinearLayout skinBlue = view.findViewById(R.id.ll_skin_blue);
+        LinearLayout skinGreen = view.findViewById(R.id.ll_skin_green);
+        LinearLayout skinPink = view.findViewById(R.id.ll_skin_pink);
+        LinearLayout skinPurple = view.findViewById(R.id.ll_skin_purple);
+        LinearLayout skinYellow = view.findViewById(R.id.ll_skin_yellow);
+        LinearLayout skinBrown = view.findViewById(R.id.ll_skin_brown);
+        LinearLayout skinGrey = view.findViewById(R.id.ll_skin_grey);
+        LinearLayout skinBlack = view.findViewById(R.id.ll_skin_black);
+
+        tvDialogTitle.setTypeface(mTypeface);
+
+        final Dialog dialog = new Dialog(mContext);
+        // 去掉对话框顶部栏
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(view);
+        dialog.show();
+
+        ivClose.setOnClickListener(v -> dialog.cancel());
+
+        // 恢复默认皮肤
+        skinBlue.setOnClickListener(v -> SkinCompatManager.getInstance().restoreDefaultTheme());
+        // 加载 assets/skins 包下的皮肤插件（skin包不能进行签名，否则读不到资源文件）
+        skinGreen.setOnClickListener(v -> SkinCompatManager.getInstance()
+                .loadSkin("green.skin", SkinCompatManager.SKIN_LOADER_STRATEGY_ASSETS));
+        skinPink.setOnClickListener(v -> SkinCompatManager.getInstance()
+                .loadSkin("pink.skin", SkinCompatManager.SKIN_LOADER_STRATEGY_ASSETS));
+        skinPurple.setOnClickListener(v -> SkinCompatManager.getInstance()
+                .loadSkin("purple.skin", SkinCompatManager.SKIN_LOADER_STRATEGY_ASSETS));
+        skinYellow.setOnClickListener(v -> SkinCompatManager.getInstance()
+                .loadSkin("yellow.skin", SkinCompatManager.SKIN_LOADER_STRATEGY_ASSETS));
+        skinBrown.setOnClickListener(v -> SkinCompatManager.getInstance()
+                .loadSkin("brown.skin", SkinCompatManager.SKIN_LOADER_STRATEGY_ASSETS));
+        skinGrey.setOnClickListener(v -> SkinCompatManager.getInstance()
+                .loadSkin("grey.skin", SkinCompatManager.SKIN_LOADER_STRATEGY_ASSETS));
+        skinBlack.setOnClickListener(v -> SkinCompatManager.getInstance()
+                .loadSkin("black.skin", SkinCompatManager.SKIN_LOADER_STRATEGY_ASSETS));
     }
 }

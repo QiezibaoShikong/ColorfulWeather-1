@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 天空蓝 sky blue color style -->
+    <color name="colorPrimary">#56CCF2</color>
+    <color name="colorPrimaryDark">#2F80ED</color>
+    <color name="colorAccent">#2F80ED</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="colorDivider">#7756CCF2</color>
+    <color name="colorNormal">#BDBDBD</color>
+    <color name="colorTextorIcon">#FFFFFF</color>
+    <color name="colorAlphaGray">#88323232</color>
+    <color name="colorWeatherIcon">#99212121</color>
+
+
+    <!--少女粉 pink color style -->
+    <!--<color name="colorPrimary">#ffdde1</color>-->
+    <!--<color name="colorPrimaryDark">#ee9ca7</color>-->
+    <!--<color name="colorAccent">#ee9ca7</color>-->
+    <!--<color name="colorPrimaryText">#212121</color>-->
+    <!--<color name="colorSecondaryText">#757575</color>-->
+    <!--<color name="colorDivider">#77ffdde1</color>-->
+    <!--<color name="colorNormal">#BDBDBD</color>-->
+    <!--<color name="colorTextorIcon">#FFFFFF</color>-->
+    <!--<color name="colorAlphaGray">#88323232</color>-->
+    <!--<color name="colorWeatherIcon">#99212121</color>-->
+
+    <!--芳草绿 green color style -->
+    <!--<color name="colorPrimary">#B3FFAB</color>-->
+    <!--<color name="colorPrimaryDark">#4AC29A</color>-->
+    <!--<color name="colorAccent">#4AC29A</color>-->
+    <!--<color name="colorPrimaryText">#212121</color>-->
+    <!--<color name="colorSecondaryText">#757575</color>-->
+    <!--<color name="colorDivider">#77B3FFAB</color>-->
+    <!--<color name="colorNormal">#BDBDBD</color>-->
+    <!--<color name="colorTextorIcon">#FFFFFF</color>-->
+    <!--<color name="colorAlphaGray">#88323232</color>-->
+    <!--<color name="colorWeatherIcon">#99212121</color>-->
+
+    <!-- 魅力紫 purple color style -->
+    <!--<color name="colorPrimary">#9796f0</color>-->
+    <!--<color name="colorPrimaryDark">#4e54c8</color>-->
+    <!--<color name="colorAccent">#4e54c8</color>-->
+    <!--<color name="colorPrimaryText">#212121</color>-->
+    <!--<color name="colorSecondaryText">#757575</color>-->
+    <!--<color name="colorDivider">#779796f0</color>-->
+    <!--<color name="colorNormal">#BDBDBD</color>-->
+    <!--<color name="colorTextorIcon">#FFFFFF</color>-->
+    <!--<color name="colorAlphaGray">#88323232</color>-->
+    <!--<color name="colorWeatherIcon">#99212121</color>-->
+
+    <!--魔力黄 yellow color style -->
+    <!--<color name="colorPrimary">#F2C94C</color>-->
+    <!--<color name="colorPrimaryDark">#3f4c6b</color>-->
+    <!--<color name="colorAccent">#F2994A</color>-->
+    <!--<color name="colorPrimaryText">#212121</color>-->
+    <!--<color name="colorSecondaryText">#757575</color>-->
+    <!--<color name="colorDivider">#77ABDCFF</color>-->
+    <!--<color name="colorNormal">#BDBDBD</color>-->
+    <!--<color name="colorTextorIcon">#FFFFFF</color>-->
+    <!--<color name="colorAlphaGray">#88323232</color>-->
+    <!--<color name="colorWeatherIcon">#99212121</color>-->
+
+    <!--古典灰 yellow color style -->
+    <!--<color name="colorPrimary">#D7DDE8</color>-->
+    <!--<color name="colorPrimaryDark">#3f4c6b</color>-->
+    <!--<color name="colorAccent">#3f4c6b</color>-->
+    <!--<color name="colorPrimaryText">#212121</color>-->
+    <!--<color name="colorSecondaryText">#757575</color>-->
+    <!--<color name="colorDivider">#77D7DDE8</color>-->
+    <!--<color name="colorNormal">#BDBDBD</color>-->
+    <!--<color name="colorTextorIcon">#FFFFFF</color>-->
+    <!--<color name="colorAlphaGray">#88323232</color>-->
+    <!--<color name="colorWeatherIcon">#99212121</color>-->
+
+    <!-- 雅典黑 deep grey color style -->
+    <!--<color name="colorPrimary">#414345</color>-->
+    <!--<color name="colorPrimaryDark">#414345</color>-->
+    <!--<color name="colorAccent">#232526</color>-->
+    <!--<color name="colorPrimaryText">#212121</color>-->
+    <!--<color name="colorSecondaryText">#757575</color>-->
+    <!--<color name="colorDivider">#77414345</color>-->
+    <!--<color name="colorNormal">#BDBDBD</color>-->
+    <!--<color name="colorTextorIcon">#FFFFFF</color>-->
+    <!--<color name="colorAlphaGray">#88323232</color>-->
+    <!--<color name="colorWeatherIcon">#99212121</color>-->
+
+    <!--复古棕 yellow color style -->
+    <!--<color name="colorPrimary">#B79891</color>-->
+    <!--<color name="colorPrimaryDark">#94716B</color>-->
+    <!--<color name="colorAccent">#94716B</color>-->
+    <!--<color name="colorPrimaryText">#212121</color>-->
+    <!--<color name="colorSecondaryText">#757575</color>-->
+    <!--<color name="colorDivider">#77B79891</color>-->
+    <!--<color name="colorNormal">#BDBDBD</color>-->
+    <!--<color name="colorTextorIcon">#FFFFFF</color>-->
+    <!--<color name="colorAlphaGray">#88323232</color>-->
+    <!--<color name="colorWeatherIcon">#99212121</color>-->
+
+    <!--冰火两仪 color style -->
+    <!--<color name="colorPrimary">#0099F7</color>-->
+    <!--<color name="colorPrimaryDark">#F11712</color>-->
+    <!--<color name="colorAccent">#F11712</color>-->
+    <!--<color name="colorPrimaryText">#212121</color>-->
+    <!--<color name="colorSecondaryText">#757575</color>-->
+    <!--<color name="colorDivider">#77FFFFFF</color>-->
+    <!--<color name="colorNormal">#BDBDBD</color>-->
+    <!--<color name="colorTextorIcon">#FFFFFF</color>-->
+    <!--<color name="colorAlphaGray">#88323232</color>-->
+    <!--<color name="colorWeatherIcon">#99212121</color>-->
+</resources>

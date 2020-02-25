@@ -9,12 +9,12 @@
     app:cardCornerRadius="@dimen/base_dimen_radius_dp_8"
     app:cardElevation="@dimen/base_dimen_size_dp_8">
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <android.support.v7.widget.AppCompatTextView
+        <TextView
             android:id="@+id/tv_today_index_title"
             style="@style/CardTitleStyle"
             android:layout_width="match_parent"
@@ -22,11 +22,11 @@
             android:gravity="center"
             android:text="@string/sweet_title_txt_life_index" />
 
-        <android.support.v7.widget.LinearLayoutCompat
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <android.support.v7.widget.LinearLayoutCompat
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/base_dimen_size_dp_2"
@@ -35,28 +35,28 @@
                 android:orientation="vertical">
 
 
-                <android.support.v7.widget.AppCompatTextView
+                <TextView
+                    android:id="@+id/tv_life_index_hum_title"
                     style="@style/TodayIndexTitleStyle"
                     android:text="湿度" />
 
-                <android.support.v7.widget.AppCompatImageView
+                <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginTop="@dimen/base_dimen_size_dp_8"
                     android:src="@drawable/ic_today_index_humidity" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <TextView
                     android:id="@+id/tv_life_index_hum"
-                    style="@style/TodayIndexContentStyle"
-                    android:text="66%" />
-            </android.support.v7.widget.LinearLayoutCompat>
+                    style="@style/TodayIndexContentStyle" />
+            </LinearLayout>
 
             <View
                 android:layout_width="1px"
                 android:layout_height="match_parent"
                 android:background="@color/colorDivider" />
 
-            <android.support.v7.widget.LinearLayoutCompat
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/base_dimen_size_dp_2"
@@ -65,29 +65,28 @@
                 android:orientation="vertical">
 
 
-                <android.support.v7.widget.AppCompatTextView
+                <TextView
                     android:id="@+id/tv_life_index_wind_dir"
                     style="@style/TodayIndexTitleStyle"
                     android:text="风" />
 
-                <android.support.v7.widget.AppCompatImageView
+                <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginTop="@dimen/base_dimen_size_dp_8"
                     android:src="@drawable/ic_today_index_windy" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <TextView
                     android:id="@+id/tv_life_index_wind_sc"
-                    style="@style/TodayIndexContentStyle"
-                    android:text="西风" />
-            </android.support.v7.widget.LinearLayoutCompat>
+                    style="@style/TodayIndexContentStyle" />
+            </LinearLayout>
 
             <View
                 android:layout_width="1px"
                 android:layout_height="match_parent"
                 android:background="@color/colorDivider" />
 
-            <android.support.v7.widget.LinearLayoutCompat
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/base_dimen_size_dp_2"
@@ -95,29 +94,28 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
-
-                <android.support.v7.widget.AppCompatTextView
+                <TextView
+                    android:id="@+id/tv_life_index_vis_title"
                     style="@style/TodayIndexTitleStyle"
                     android:text="能见度" />
 
-                <android.support.v7.widget.AppCompatImageView
+                <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginTop="@dimen/base_dimen_size_dp_8"
                     android:src="@drawable/ic_today_index_visable" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <TextView
                     android:id="@+id/tv_life_index_vis"
-                    style="@style/TodayIndexContentStyle"
-                    android:text="2km" />
-            </android.support.v7.widget.LinearLayoutCompat>
+                    style="@style/TodayIndexContentStyle" />
+            </LinearLayout>
 
             <View
                 android:layout_width="1px"
                 android:layout_height="match_parent"
                 android:background="@color/colorDivider" />
 
-            <android.support.v7.widget.LinearLayoutCompat
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/base_dimen_size_dp_2"
@@ -126,22 +124,23 @@
                 android:orientation="vertical">
 
 
-                <android.support.v7.widget.AppCompatTextView
+                <TextView
+                    android:id="@+id/tv_life_index_fl_title"
                     style="@style/TodayIndexTitleStyle"
                     android:text="体感温度" />
 
-                <android.support.v7.widget.AppCompatImageView
+                <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginTop="@dimen/base_dimen_size_dp_8"
                     android:src="@drawable/ic_today_index_suitable_temp" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <TextView
                     android:id="@+id/tv_life_index_fl"
                     style="@style/TodayIndexContentStyle" />
-            </android.support.v7.widget.LinearLayoutCompat>
+            </LinearLayout>
 
 
-        </android.support.v7.widget.LinearLayoutCompat>
-    </android.support.v7.widget.LinearLayoutCompat>
+        </LinearLayout>
+    </LinearLayout>
 </android.support.v7.widget.CardView>

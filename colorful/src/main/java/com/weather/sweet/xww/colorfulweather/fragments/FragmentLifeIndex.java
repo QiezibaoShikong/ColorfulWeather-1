@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -43,10 +44,13 @@ import butterknife.BindView;
 public class FragmentLifeIndex extends BaseFragment {
 
     @BindView(R.id.linear_content)
-    LinearLayoutCompat linearContent;
+    LinearLayout linearContent;
 
     @BindView(R.id.tv_today_index_title)
     AppCompatTextView tvTodayIndexTitle;
+
+    @BindView(R.id.tv_life_index_hum_title)
+    AppCompatTextView tvIndexHumTitle;//相对湿度标题
 
     @BindView(R.id.tv_life_index_hum)
     AppCompatTextView tvIndexHum;//相对湿度
@@ -55,10 +59,16 @@ public class FragmentLifeIndex extends BaseFragment {
     AppCompatTextView tvIndexWindSc;//风力
 
     @BindView(R.id.tv_life_index_wind_dir)
-    AppCompatTextView tvIndexWindDir;//风向
+    AppCompatTextView tvIndexWindDir;//风向标题
+
+    @BindView(R.id.tv_life_index_fl_title)
+    AppCompatTextView tvIndexFlTitle;//体感温度标题
 
     @BindView(R.id.tv_life_index_fl)
     AppCompatTextView tvIndexFl;//体感温度
+
+    @BindView(R.id.tv_life_index_vis_title)
+    AppCompatTextView tvIndexVisTitle;//能见度标题
 
     @BindView(R.id.tv_life_index_vis)
     AppCompatTextView tvIndexVis;//能见度
@@ -80,6 +90,10 @@ public class FragmentLifeIndex extends BaseFragment {
     private void initView() {
         linearContent.addView(OccupyView.getOccupyStatusbarView(mContext), 0);
         tvTodayIndexTitle.setTypeface(mTypeface);
+        tvIndexWindDir.setTypeface(mTypeface);
+        tvIndexHumTitle.setTypeface(mTypeface);
+        tvIndexFlTitle.setTypeface(mTypeface);
+        tvIndexVisTitle.setTypeface(mTypeface);
     }
 
     @Override

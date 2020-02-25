@@ -8,6 +8,7 @@ import android.support.v7.widget.AppCompatTextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.weather.sweet.xww.applibaray.app.AppConfiguration;
 import com.weather.sweet.xww.colorfulweather.R;
 import com.weather.sweet.xww.colorfulweather.entity.CitiesListEntity;
 import com.weather.sweet.xww.colorfulweather.utils.Icon;
@@ -25,9 +26,10 @@ public class CitiesListAdapter extends BaseQuickAdapter<CitiesListEntity, BaseVi
 
     private Typeface mTypeface;
 
-    public CitiesListAdapter(Context context, int layoutResId, @Nullable List<CitiesListEntity> data) {
+    public CitiesListAdapter(int layoutResId, @Nullable List<CitiesListEntity> data) {
         super(layoutResId, data);
-        mTypeface = Typeface.createFromAsset(context.getAssets(), "maobixingshu.ttf");
+        mTypeface = Typeface.createFromAsset(AppConfiguration.getInstance().getAppContext().getAssets(),
+                "fangzhengkaiti.ttf");
     }
 
     @Override
@@ -41,6 +43,7 @@ public class CitiesListAdapter extends BaseQuickAdapter<CitiesListEntity, BaseVi
         cityName.setTypeface(mTypeface);
         temperature.setText(item.getTemperature());
         weather.setText(item.getWeather());
+        weather.setTypeface(mTypeface);
         icon.setImageDrawable(Icon.getIcon(mContext, item.getCondCode()));
         helper.addOnClickListener(R.id.content_item_city_card);
         helper.addOnClickListener(R.id.imgv_city_list_delete);

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.ContentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/ripple_recy_color_accent_masked">
+    android:background="@drawable/ripple_recy_item"
+    android:layout_height="wrap_content">
 
-    <android.support.v7.widget.AppCompatTextView
+    <TextView
         android:id="@+id/tv_city_search_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -13,4 +13,4 @@
         android:layout_marginBottom="@dimen/base_dimen_size_dp_8"
         android:textColor="@color/colorSecondaryText"
         android:textSize="@dimen/base_dimen_size_sp_12" />
-</android.support.v7.widget.ContentFrameLayout>
+</FrameLayout>

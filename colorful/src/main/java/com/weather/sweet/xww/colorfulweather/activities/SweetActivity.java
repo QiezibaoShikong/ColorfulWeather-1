@@ -9,6 +9,8 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AppCompatDelegate;
+import android.support.v7.app.SkinAppCompatDelegateImpl;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,6 +18,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONObject;
@@ -64,7 +67,7 @@ public class SweetActivity extends BaseActivity {
     AppCompatTextView tvDataSourceLicence;
 
     @BindView(R.id.linear_drawer_head_bar)
-    LinearLayoutCompat mLinearDrawerHeaderBar;
+    LinearLayout mLinearDrawerHeaderBar;
 
     @BindView(R.id.recycler_cities_list)
     RecyclerView mCitiesRecyclerView;
@@ -167,7 +170,7 @@ public class SweetActivity extends BaseActivity {
     private void initCitiesRecyclerView() {
         mCitiesListEntities = LitePal.findAll(CitiesListEntity.class);
         mCitiesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mCitiesListAdapter = new CitiesListAdapter(this, R.layout.recy_drawer_city_list_item, mCitiesListEntities);
+        mCitiesListAdapter = new CitiesListAdapter(R.layout.recy_drawer_city_list_item, mCitiesListEntities);
         mCitiesRecyclerView.setAdapter(mCitiesListAdapter);
 
         //添加底部按钮
@@ -274,6 +277,7 @@ public class SweetActivity extends BaseActivity {
     }
 
     private void initRefreshLayout() {
+        mSwipeRefresh.setBackgroundResource(R.drawable.bg_sweet_card_header_gradient);
         mSwipeRefresh.setOnRefreshListener(refreshLayout ->
                 AppConfiguration.getInstance().getHandler().postDelayed(() ->
                         requestWeatherInfo(mWeatherId), 1000));

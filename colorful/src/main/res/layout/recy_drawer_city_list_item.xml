@@ -13,13 +13,13 @@
         app:leftSwipe="false"
         app:swipeEnable="true">
 
-        <android.support.v7.widget.ContentFrameLayout
+        <FrameLayout
             android:id="@+id/content_item_city_card"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/bg_sweet_card_header_gradient">
 
-            <android.support.v7.widget.AppCompatTextView
+            <TextView
                 android:id="@+id/tv_city_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -27,48 +27,47 @@
                 android:layout_marginLeft="@dimen/base_dimen_size_dp_16"
                 android:text="北京"
                 android:textColor="@color/colorTextorIcon"
-                android:textSize="@dimen/base_dimen_size_sp_18" />
+                android:textSize="@dimen/base_dimen_size_sp_20" />
 
-            <android.support.v7.widget.LinearLayoutCompat
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|center_vertical"
                 android:layout_marginRight="@dimen/base_dimen_size_dp_8">
 
-                <android.support.v7.widget.AppCompatImageView
+                <ImageView
                     android:id="@+id/tv_city_weather_icon"
                     android:layout_width="@dimen/base_dimen_size_dp_32"
                     android:layout_height="@dimen/base_dimen_size_dp_32"
                     android:layout_margin="@dimen/base_dimen_size_dp_8"
                     android:tint="@color/colorTextorIcon" />
 
-                <android.support.v7.widget.LinearLayoutCompat
+                <LinearLayout
                     android:layout_width="@dimen/base_dimen_size_dp_56"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <TextView
                         android:id="@+id/tv_city_temperature"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorTextorIcon"
-                        android:textSize="@dimen/base_dimen_size_sp_12" />
+                        android:textSize="@dimen/base_dimen_size_sp_14" />
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <TextView
                         android:id="@+id/tv_city_weather"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/base_dimen_size_dp_2"
-                        android:text="多云转阴"
                         android:textColor="@color/colorTextorIcon"
-                        android:textSize="@dimen/base_dimen_size_sp_10" />
-                </android.support.v7.widget.LinearLayoutCompat>
+                        android:textSize="@dimen/base_dimen_size_sp_14" />
+                </LinearLayout>
 
-            </android.support.v7.widget.LinearLayoutCompat>
+            </LinearLayout>
 
-        </android.support.v7.widget.ContentFrameLayout>
+        </FrameLayout>
 
         <RelativeLayout
             android:layout_width="48dp"

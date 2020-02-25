@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--base dp-->
+    <dimen name="base_dimen_size_dp_2">2dp</dimen>
+    <dimen name="base_dimen_size_dp_4">4dp</dimen>
+    <dimen name="base_dimen_size_dp_8">8dp</dimen>
+    <dimen name="base_dimen_size_dp_16">16dp</dimen>
+    <dimen name="base_dimen_size_dp_24">24dp</dimen>
+    <dimen name="base_dimen_size_dp_32">32dp</dimen>
+    <dimen name="base_dimen_size_dp_40">40dp</dimen>
+    <dimen name="base_dimen_size_dp_48">48dp</dimen>
+    <dimen name="base_dimen_size_dp_56">56dp</dimen>
+    <dimen name="base_dimen_size_dp_64">64dp</dimen>
+    <dimen name="base_dimen_size_dp_72">72dp</dimen>
+    <dimen name="base_dimen_size_dp_80">80dp</dimen>
+    <dimen name="base_dimen_size_dp_88">88dp</dimen>
+    <dimen name="base_dimen_size_dp_96">96dp</dimen>
+
+    <!--base sp-->
+    <dimen name="base_dimen_size_sp_6">6sp</dimen>
+    <dimen name="base_dimen_size_sp_8">8sp</dimen>
+    <dimen name="base_dimen_size_sp_10">10sp</dimen>
+    <dimen name="base_dimen_size_sp_12">12sp</dimen>
+    <dimen name="base_dimen_size_sp_14">14sp</dimen>
+    <dimen name="base_dimen_size_sp_16">16sp</dimen>
+    <dimen name="base_dimen_size_sp_18">18sp</dimen>
+    <dimen name="base_dimen_size_sp_20">20sp</dimen>
+    <dimen name="base_dimen_size_sp_22">22sp</dimen>
+    <dimen name="base_dimen_size_sp_24">24sp</dimen>
+    <dimen name="base_dimen_size_sp_26">26sp</dimen>
+    <dimen name="base_dimen_size_sp_30">30sp</dimen>
+    <dimen name="base_dimen_size_sp_40">40sp</dimen>
+    <dimen name="base_dimen_size_sp_50">50sp</dimen>
+    <dimen name="base_dimen_size_sp_60">60sp</dimen>
+    <dimen name="base_dimen_size_sp_70">70sp</dimen>
+
+    <!--base elevation-->
+    <dimen name="base_dimen_elevation_dp_2">2dp</dimen>
+    <dimen name="base_dimen_elevation_dp_4">4dp</dimen>
+    <dimen name="base_dimen_elevation_dp_6">6dp</dimen>
+    <dimen name="base_dimen_elevation_dp_8">8dp</dimen>
+
+    <!--base radius-->
+    <dimen name="base_dimen_radius_dp_2">2dp</dimen>
+    <dimen name="base_dimen_radius_dp_4">4dp</dimen>
+    <dimen name="base_dimen_radius_dp_6">6dp</dimen>
+    <dimen name="base_dimen_radius_dp_8">8dp</dimen>
+    <dimen name="base_dimen_radius_dp_10">10dp</dimen>
+    <dimen name="base_dimen_radius_dp_12">12dp</dimen>
+    <dimen name="base_dimen_radius_dp_14">14dp</dimen>
+    <dimen name="base_dimen_radius_dp_16">16dp</dimen>
+
+    <!--碎片 1 ：fragment_weather dimen res -->
+    <!--顶部的背景图片-->
+    <dimen name="sweet_imgv_header_bg_height">160dp</dimen>
+    <!--天气信息卡片-->
+    <dimen name="sweet_card_weather_height">192dp</dimen>
+    <dimen name="sweet_card_margin_top">120dp</dimen>
+
+    <!--碎片 2 ：fragment_life_index dimen res -->
+    <!--今日指数卡片-->
+    <dimen name="sweet_card_more_index_height">120dp</dimen>
+    <dimen name="sweet_cards_life_index_height">80dp</dimen>
+
+    <!--碎片 2 ：fragment_life_index dimen res -->
+    <!--今日指数卡片-->
+    <dimen name="city_select_card_height">180dp</dimen>
+</resources>

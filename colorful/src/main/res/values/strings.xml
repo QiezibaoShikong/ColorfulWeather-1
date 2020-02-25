@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">华美天气</string>
+
+    <!--碎片 1 ：fragment_weather string res -->
+    <string name="sweet_title_txt_hourly">逐时天气预报</string>
+    <string name="sweet_title_txt_daily">一周天气预报</string>
+    <string name="sweet_title_txt_ultraviolet">紫外线</string>
+    <string name="sweet_title_txt_sun_raise_and_set">日出日落</string>
+    <string name="sweet_title_txt_now">现在</string>
+
+    <!--碎片 2 ：fragment_life_index string res -->
+    <string name="sweet_title_txt_life_index">今日指数</string>
+    <string name="sweet_sec_title_txt_uv_index">紫外线</string>
+    <string name="sweet_sec_title_txt_trav_index">旅游</string>
+    <string name="sweet_sec_title_txt_sport_index">运动</string>
+    <string name="sweet_sec_title_txt_flu_index">感冒</string>
+    <string name="sweet_sec_title_txt_cw_index">洗车</string>
+
+    <string name="software_data_source_api">数据源：和风天气</string>
+    <string name="software_introduce">华美天气，是一款免费且无广告的天气服务软件，感谢和风天气提供的API服务。</string>
+</resources>

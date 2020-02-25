@@ -7,6 +7,9 @@ import com.weather.sweet.xww.applibaray.app.AppConfigurator;
 
 import org.litepal.LitePal;
 
+import skin.support.SkinCompatManager;
+import skin.support.design.app.SkinMaterialViewInflater;
+
 
 /**
  * 功能：初始化APP所需的配置信息
@@ -28,6 +31,14 @@ public class SweetApp extends Application {
                 .withProvinceApi("http://guolin.tech/api/china")
                 .configure();
 
+        // 数据库框架
         LitePal.initialize(this);
+
+        // 换肤框架
+        SkinCompatManager.withoutActivity(this)                // 基础控件换肤初始化
+                .addInflater(new SkinMaterialViewInflater()) // material design 控件换肤初始化[可选]
+                .setSkinStatusBarColorEnable(false)         // 关闭状态栏换肤，默认打开[可选]
+                .setSkinWindowBackgroundEnable(false)     // 关闭windowBackground换肤，默认打开[可选]
+                .loadSkin();
     }
 }

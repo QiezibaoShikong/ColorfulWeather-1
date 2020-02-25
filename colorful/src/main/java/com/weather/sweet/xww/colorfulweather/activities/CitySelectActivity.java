@@ -2,6 +2,7 @@ package com.weather.sweet.xww.colorfulweather.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -17,6 +18,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONArray;
@@ -47,6 +51,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import skin.support.widget.SkinCompatTextView;
 
 /**
  * 功能：
@@ -62,13 +67,13 @@ public class CitySelectActivity extends BaseActivity {
     ViewPager vpCitySelected;
 
     @BindView(R.id.imgv_city_select_image)
-    AppCompatImageView imgvCitySelectImage;
+    ImageView imgvCitySelectImage;
 
     @BindView(R.id.imgv_city_select_bg)
-    AppCompatImageView imgvCitySelectBg;//图片背景
+    ImageView imgvCitySelectBg;//图片背景
 
     @BindView(R.id.imgv_city_select_close)
-    AppCompatImageView imgvCitySelectClose;
+    ImageView imgvCitySelectClose;
 
     @BindView(R.id.fab_city_select_search)
     FloatingActionButton fabReturn;
@@ -80,22 +85,22 @@ public class CitySelectActivity extends BaseActivity {
     TabLayout tlCitySelected;
 
     @BindView(R.id.linear_city_selected)
-    LinearLayoutCompat linearCitySelected;
+    LinearLayout linearCitySelected;
 
     @BindView(R.id.city_selected_name)
-    AppCompatTextView tvCitySelectedName;
+    TextView tvCitySelectedName;
 
     @BindView(R.id.tv_city_selected_sub_name)
-    AppCompatTextView tvCitySelecteSubdName;
+    TextView tvCitySelecteSubdName;
 
     @BindView(R.id.tv_city_selected_now_weather)
-    AppCompatTextView tvCitySelectedWeather;
+    TextView tvCitySelectedWeather;
 
     @BindView(R.id.imgv_city_select_now_weather_icon)
-    AppCompatImageView imgvCitySelectIcon;
+    ImageView imgvCitySelectIcon;
 
     @BindView(R.id.tv_city_select_temperature)
-    AppCompatTextView tvCitySelectTemperature;
+    TextView tvCitySelectTemperature;
 
     private RecyclerView mRecyclerCitySearch;
     private RecyclerView mRecyclerHotCities;
@@ -183,6 +188,8 @@ public class CitySelectActivity extends BaseActivity {
         final ViewPageAdapt adapter = new ViewPageAdapt(views, titles);
         vpCitySelected.setAdapter(adapter);
         vpCitySelected.setOffscreenPageLimit(2);
+        tlCitySelected.setSelectedTabIndicatorColor(R.color.colorAccent);
+//        tlCitySelected.setTabTextColors(R.color.colorPrimary, R.color.colorAccent);
         tlCitySelected.setupWithViewPager(vpCitySelected);
 
         initHotCitiesRecyclerView(hotCitiesView);
@@ -252,17 +259,18 @@ public class CitySelectActivity extends BaseActivity {
         mCityName = hotCityName;
 
         currentPosition = position;
+
         final View currentView = mRecyclerHotCities.getChildAt(currentPosition).findViewById(R.id.view_city_selected);
-        final AppCompatTextView currentText = mRecyclerHotCities.getChildAt(currentPosition).findViewById(R.id.tv_city_select_name);
+        final TextView currentText = mRecyclerHotCities.getChildAt(currentPosition).findViewById(R.id.tv_city_select_name);
         final View previousView = mRecyclerHotCities.getChildAt(previousPosition).findViewById(R.id.view_city_selected);
-        final AppCompatTextView previousText = mRecyclerHotCities.getChildAt(previousPosition).findViewById(R.id.tv_city_select_name);
+        final TextView previousText = mRecyclerHotCities.getChildAt(previousPosition).findViewById(R.id.tv_city_select_name);
 
         if (currentPosition != previousPosition) {
             //当前设置威选中到颜色
-            setCurrentSelectedColor(currentView, currentText);
+//            setCurrentSelectedColor(currentView, currentText);
 
             //将前一个恢复到初始颜色
-            restorePreviousColor(previousView, previousText);
+//            restorePreviousColor(previousView, previousText);
 
             //获取天气信息
             requestNowWeatherApi(hotCityWeatherId);
@@ -274,7 +282,7 @@ public class CitySelectActivity extends BaseActivity {
              * 需要获取一次天气数据，并设置颜色标志
              */
             if (isFirstStart) {
-                setCurrentSelectedColor(currentView, currentText);
+//                setCurrentSelectedColor(currentView, currentText);
 
                 requestNowWeatherApi(hotCityWeatherId);
                 isFirstStart = false;
@@ -284,15 +292,15 @@ public class CitySelectActivity extends BaseActivity {
     }
 
 
-    private void setCurrentSelectedColor(View currentView, AppCompatTextView currentText) {
-        currentView.setBackgroundColor(Color.getColor(R.color.colorAccent));
-        currentText.setTextColor(Color.getColor(R.color.colorAccent));
-    }
-
-    private void restorePreviousColor(View previousView, AppCompatTextView previousText) {
-        previousView.setBackgroundColor(Color.getColor(R.color.colorDivider));
-        previousText.setTextColor(Color.getColor(R.color.colorSecondaryText));
-    }
+//    private void setCurrentSelectedColor(View currentView, TextView currentText) {
+//        currentView.setBackgroundColor(R.color.colorAccent);
+//        currentText.setTextColor(R.color.colorAccent);
+//    }
+//
+//    private void restorePreviousColor(View previousView, TextView previousText) {
+//        previousView.setBackgroundColor(R.color.colorNormal);
+//        previousText.setTextColor(R.color.colorNormal);
+//    }
 
 
     /**
